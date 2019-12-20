@@ -46,4 +46,31 @@ it("deletes an word by id") do
  end
 end
 
+describe('.all') do
+    it("returns an empty array when there are no words") do
+      expect(Word.all).to(eq([]))
+    end
+  end
+
+  describe('.clear') do
+    it("clears all words") do
+      word = Word.new("zealous", nil)
+      word.save()
+      word2 = Word.new("scintillating", nil)
+      word2.save()
+      Word.clear()
+      expect(Word.all).to(eq([]))
+    end
+  end
+
+  describe('.find') do
+    it("finds a word by id") do
+      word = Word.new("elucidate", nil)
+      word.save()
+      word2 = Word.new("chuffed", nil)
+      word2.save()
+      expect(Word.find(word.id)).to(eq(word))
+    end
+  end
+
 end
