@@ -1,17 +1,17 @@
 <h2>Word Name: <%= @word.name %></h2>
+<h3>Definitions of word</h3>
 <br>
-<h2>Definition of word:</h2>
-
-<% if @word.definitions %>
-    <% @word.definitions.each do |definition| %>
-      <p><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.name %></a></p>
-    <% end %>
-<% else %>
-  <p>There are no definitions listed for this word yet.</p>
-<% end %>
-
-<h4>Add a definition for this word:</h4>
-
+  <% if @word.definitions %>
+    <div>
+      <% @word.definitions.each do |definition| %>
+        <p><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.name %></a></p>
+      <% end %>
+    </div>
+  <% else %>
+    <p>There are no definitions listed for this word yet.</p>
+  <% end %>
+<br>
+<h4>Add a definition:</h4>
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
     <input id="definition_name" name="definition_name" class="form-control" type="text">
