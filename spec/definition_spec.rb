@@ -30,4 +30,15 @@ before(:each) do
     end
   end
 
+  describe('.clear') do
+    it("clears all definitions") do
+      definition = Definition.new("caper - skip or dance about in a lively or playful way", @word.id, nil)
+      definition.save()
+      definition2 = Definition.new("apathetic - showing or feeling no interest, enthusiasm, or concern", @word.id, nil)
+      definition2.save()
+      Definition.clear()
+      expect(Definition.all).to(eq([]))
+    end
+  end
+
 end
