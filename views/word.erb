@@ -1,4 +1,4 @@
-<h2>Word Name: <%= @word.name %></h2>
+<h1 class="title">You Have Added The Word: <%= @word.name %></h1>
 <hr>
 <h3>Definitions for the word: <em><%= @word.name %></em></h3>
 <br>
@@ -9,7 +9,7 @@
   <% else %>
     <p>There are no definitions listed for this word yet.</p>
   <% end %>
-  <br>
+<br>
 <h4>Add a definition for: <%= @word.name %></h4>
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
