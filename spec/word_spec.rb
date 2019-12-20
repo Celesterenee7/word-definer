@@ -35,4 +35,15 @@ it("saves a word") do
  end
 end
 
+describe('#delete') do
+it("deletes an word by id") do
+  word = Word.new("lurid", nil)
+  word.save()
+  word2 = Word.new("tryst", nil)
+  word2.save()
+  word.delete()
+  expect(Word.all).to(eq([word2]))
+ end
+end
+
 end
