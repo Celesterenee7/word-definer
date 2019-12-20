@@ -5,7 +5,7 @@ describe '#Word' do
 
 before(:each) do
     Word.clear()
-    # Definition.clear()
+    Definition.clear()
   end
 
   describe('#==') do
