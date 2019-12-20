@@ -25,4 +25,14 @@ before(:each) do
  end
 end
 
+describe('#save') do
+it("saves a word") do
+  word = Word.new("euphemism", nil)
+  word.save()
+  word2 = Word.new("glib", nil)
+  word2.save()
+  expect(Word.all).to(eq([word, word2]))
+ end
+end
+
 end
