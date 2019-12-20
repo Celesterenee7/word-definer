@@ -49,4 +49,14 @@ before(:each) do
   end
  end
 
+ describe('.find') do
+    it("finds a definition by id") do
+      definition = Definition.new("agelastic - a person who never laughs", @word.id, nil)
+      definition.save()
+      definition2 = Definition.new("infucation - the act of painting or staining, especially of painting the face", @word.id, nil)
+      definition2.save()
+      expect(Definition.find(definition.id)).to(eq(definition))
+    end
+  end
+
 end
