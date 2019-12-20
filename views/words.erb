@@ -1,6 +1,10 @@
 <h1 class="title">Word Definer</h1>
+<br>
+<p class="basic-text">Add a word that you would like to learn about and create your own definitions!</p>
 <hr>
-<h3>Available Words</h3>
+<br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86TDEnVKEo0QT3iP14m_s_RvTbFOYlA8u5HcJ_kzLQAC0jlhH&s"/>
+<h2>Available Words</h2>
 <br>
 <% if @words.any? %>
 
@@ -9,8 +13,8 @@
 <% end %>
 
 <% else %>
-<p>There are currently no words to display.</p>
+<p>There are currently no words to display...</p>
 <% end %>
 <br>
 <br>
-<a href="/words/new" class="main-button">Add New Word</a>
+<a href="/words/new" class="main-button">Add Word</a>
