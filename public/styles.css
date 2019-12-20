@@ -2,11 +2,19 @@
     font-family: 'Martel', serif;
 }
 
-.main-button {
-    padding: 15px 25px !important;
-    background-color: #0C8E70;
+a {
+    font-size: 20px;
+    color: black;
     text-decoration: none !important;
-    color: white !important;
+}
+
+a:hover {
+    color: #69AC0A !important;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .container {
@@ -14,4 +22,28 @@
     text-align: center;
     padding-right: 100px !important;
     padding-left: 100px !important;
+}
+
+.main-button {
+    padding: 12px 45px !important;
+    background-color: #69AC0A;
+    text-decoration: none !important;
+    color: white !important;
+    letter-spacing: 0.1em;
+}
+
+.main-button:hover {
+    color: white !important;
+}
+
+.delete-button {
+    padding: 15px 25px !important;
+    background-color: #EF0104;
+    text-decoration: none !important;
+    color: white !important;
+    letter-spacing: 0.1em;
+}
+
+.title {
+    font-size: 40px;
 }

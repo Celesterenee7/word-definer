@@ -1,6 +1,7 @@
-<h1>Word Definer</h1>
-
+<h1 class="title">Word Definer</h1>
+<hr>
 <h3>Available Words</h3>
+<br>
 <% if @words.any? %>
 
 <% @words.each do |word| %>
@@ -11,4 +12,5 @@
 <p>There are currently no words to display.</p>
 <% end %>
 <br>
-<a href="/words/new" class="main-button">Add a new word</a>
+<br>
+<a href="/words/new" class="main-button">Add New Word</a>

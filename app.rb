@@ -76,4 +76,4 @@ delete('/words/:id/definitions/:definition_id') do
     definition.delete
     @word = Word.find(params[:id].to_i())
     erb(:word)
-end
+  end
