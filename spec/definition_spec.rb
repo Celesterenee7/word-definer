@@ -41,4 +41,12 @@ before(:each) do
     end
   end
 
+  describe('#save') do
+  it("saves a definition") do
+    definition = Definition.new("solicitude - care or concern for someone or something", @word.id, nil)
+    definition.save()
+    expect(Definition.all).to(eq([definition]))
+  end
+ end
+
 end
