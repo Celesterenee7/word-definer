@@ -14,10 +14,20 @@ before(:each) do
 
   describe('#==') do
   it("is the same definition if it has the same attributes as another definition") do
-    definition = Definition.new("barmy", @word.id, nil)
-    definition2 = Definition.new("barmy", @word.id, nil)
+    definition = Definition.new("barmy - containing or resembling barm; frothy", @word.id, nil)
+    definition2 = Definition.new("barmy - containing or resembling barm; frothy", @word.id, nil)
     expect(definition).to(eq(definition2))
   end
  end
+
+ describe('.all') do
+    it("returns a list of all definitions") do
+      definition = Definition.new("dexterous - showing or having skill, especially with the hands", @word.id, nil)
+      definition.save()
+      definition2 = Definition.new("disarming - (of manner or behavior) having the effect of allaying suspicion or hostility, especially through charm", @word.id, nil)
+      definition2.save()
+      expect(Definition.all).to(eq([definition, definition2]))
+    end
+  end
 
 end
