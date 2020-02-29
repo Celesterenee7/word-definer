@@ -5,6 +5,10 @@
 The concept for this website is to make learning fun: children will write up a list of words they don't know (but would like to learn) and then come up with their own definitions. They can add a new word as well as multiple definitions for those words. They can update, delete, and add words as they see fit. They can also update and delete any definitions they have associated with these words. 
 
 [Click here](https://murmuring-bastion-13528.herokuapp.com/) to view this application online (deployed on Heroku)
+
+## Website Screenshot:
+![alt text](https://raw.githubusercontent.com/Celesterenee7/word-definer/master/public/worddefiner.jpeg)
+
 ## Specifications:
 
 |Spec|Input|Output|
